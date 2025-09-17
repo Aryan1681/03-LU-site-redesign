@@ -4,18 +4,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fran's Flowers | Boutique Flower Shop in San Francisco</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..900&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
     <header>
-      <div class="header-content">
-        <h1><span class="accent">Fran's</span> Flowers</h1>
-        <p class="tagline">Brightening San Francisco since 1995</p>
+      <div class="wrap">
+        <div class="header-content">
+          <h1><span class="accent">Fran's</span> Flowers</h1>
+          <p class="tagline">Brightening San Francisco since 1995</p>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="visually-hidden" />
+        <label
+          for="nav-toggle"
+          class="nav-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Open menu"
+          >☰</label
+        >
+
+        <nav aria-label="Primary">
+          <ul id="site-nav" class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#visit">Visit Us</a></li>
+            <li><a href="about.html">About Fran</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <div id="hero-container">
+    <div id="hero-container" class="wrap">
       <img
         src="img/fran.png"
         alt="Francine Miller, owner of Fran's Flowers"
@@ -23,21 +55,28 @@
       />
     </div>
 
-    <main>
-      <section class="about-us">
+    <main class="wrap">
+      <section id="about" class="about-us">
         <h2><span class="accent">About</span> Us</h2>
-        <p>
-          Fran's Flowers was founded in 1995 by Francine Miller to share joy,
-          beauty, and connection with the Mission District of San Francisco.
-          Thirty years later we remain rooted in that vision, brightening lives
-          with every bouquet while supporting our community. Ten percent of each
-          sale continues to fund efforts to fight homelessness across the Bay
-          Area.
-        </p>
-        <p>Thank you for helping us grow kindness one flower at a time.</p>
+        <p>Francine Miller opened Fran’s Flowers in 1995 with a simple idea: bring color and kindness into people’s everyday lives. She started out arranging bouquets for neighbors in the Mission District, and her passion for flowers quickly became a neighborhood tradition.</p>
+        <p>Over the years, Fran’s shop has become a community hub, supporting local growers and donating a portion of sales to fight homelessness in San Francisco. Her dedication has earned her loyal customers across the Bay Area. Thank you for helping us grow kindness one flower at a time.</p>
       </section>
 
-      <section class="specials">
+      <section id="seasonal" class="seasonal">
+        <h2><span class="accent">Seasonal</span> Picks</h2>
+        <figure class="seasonal-card">
+          <img
+            src="img/roses.png"
+            alt="Autumn Rose Bouquet with orange and burgundy tones"
+          />
+          <figcaption>
+            <h3>Autumn Rose Bouquet</h3>
+            <p>Best for birthdays • Only here ‘til October</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="specials" class="specials">
         <h2><span class="accent">Weekly</span> Specials</h2>
         <div class="specials-list">
           <article class="special-offer">
@@ -63,7 +102,23 @@
         </div>
       </section>
 
-      <section class="visit-us">
+      <section id="testimonials" class="testimonials">
+        <h2><span class="accent">Happy</span> Customers</h2>
+        <figure class="quote">
+          <blockquote>
+            <p>“Flowers were fresh and the bouquet design was stunning.”</p>
+          </blockquote>
+          <figcaption>— Maya R., Mission District</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>
+            <p>“Ordered last minute and still delivered on time. Lifesaver.”</p>
+          </blockquote>
+          <figcaption>— Jordan P., SoMa</figcaption>
+        </figure>
+      </section>
+
+      <section id="visit" class="visit-us">
         <h2><span class="accent">Visit</span> Us</h2>
         <div class="contact-info">
           <p>Come in and say hi!</p>
@@ -75,6 +130,7 @@
           </div>
         </div>
         <iframe
+          title="Map to Fran’s Flowers"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.144965296929!2d-122.4230293!3d37.7689366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e3a37128e21%3A0xf85bfc7fef295b98!2s123%20Valencia%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1722345678901!5m2!1sen!2sus"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -83,9 +139,42 @@
     </main>
 
     <footer>
-      <div class="footer-content">
+      <div class="wrap footer-content">
         <p>&copy; 2025 Fran's Flowers LLC.</p>
         <p>Brightening lives one flower at a time</p>
+
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#visit">Visit</a></li>
+            <li><a href="about.html">About Fran</a></li>
+          </ul>
+        </nav>
+
+        <ul class="social">
+          <li>
+            <a aria-label="Fran’s Instagram" href="#"
+              ><span class="material-symbols-outlined" aria-hidden="true"
+                >photo_camera</span
+              ></a
+            >
+          </li>
+          <li>
+            <a aria-label="Fran’s Facebook" href="#"
+              ><span class="material-symbols-outlined" aria-hidden="true"
+                >group</span
+              ></a
+            >
+          </li>
+          <li>
+            <a aria-label="Fran’s X (Twitter)" href="#"
+              ><span class="material-symbols-outlined" aria-hidden="true"
+                >alternate_email</span
+              ></a
+            >
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
